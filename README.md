@@ -36,7 +36,7 @@ python train_soc.py --rank 0 --gpu [0/1/...] @@@other args@@@
 python train_soc.py --world-size 1 --rank 0 @@@other args@@@
 ```
 
-- Using DataParallel DistributedDataParallel with single node
+- Using DistributedDataParallel with single node
 
 ```
 python train_soc.py --world-size 1 --rank 0 --multiprocessing-distributed @@@other args@@@
