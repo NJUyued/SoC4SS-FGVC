@@ -28,13 +28,15 @@ Code for CVPR 2023 Submission (ID: 8985) "*Roll With the Punches: Expansion and 
 ```
 python train_soc.py --rank 0 --gpu [0/1/...] @@@other args@@@
 ```
-### Training with Multi-GPUs (with DataParallel)
+### Training with Multi-GPUs
+
+- Using DataParallel
 
 ```
 python train_soc.py --world-size 1 --rank 0 @@@other args@@@
 ```
 
-### Training with Multi-GPUs (with DistributedDataParallel and single node)
+- Using DataParallel DistributedDataParallel with single node
 
 ```
 python train_soc.py --world-size 1 --rank 0 --multiprocessing-distributed @@@other args@@@
