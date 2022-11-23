@@ -4,12 +4,12 @@ Code for CVPR 2023 Submission: *Roll With the Punches: Expansion and Shrinkage o
 
 ## Requirements
 
-- matplotlib==3.3.2
-- numpy==1.19.2
-- pandas==1.1.5
-- Pillow==9.0.1
-- torch==1.4.0+cu92
-- torchvision==0.5.0+cu92
+- numpy==1.20.3
+- Pillow==9.3.0
+- scikit_learn==1.1.3
+- torch==1.8.0
+- torchvision==0.9.0
+
 
 ## How to Train
 ### Important Args
@@ -17,8 +17,8 @@ Code for CVPR 2023 Submission: *Roll With the Punches: Expansion and Shrinkage o
 - `--dataset [semi-fungi/semi-aves]` and `--data_dir`: Your dataset name and path. We support two datasets: Semi-Fungi and Semi-Aves (See *"A Realistic Evaluation of Semi-Supervised Learning for Fine-Grained Classification"* for details).
 - `--unlabel [in/inout]`: The unlabeled data used for training. The unlabeled data of Semi-Fungi and Semi-Aves contains two subsets. One has in-distribution data only, the other one has both in-distribution and out-of-distribution data.
 - `--alpha`: $\alpha$ for confidence-aware $k$ selection.
-- `--num_tracked_batch`: $N_{B}$ for CTT.
-- `--resume`, `--load_path`, `--load_path_soc` and `--pretrained`: If you want to resume training without saved data of *centroids* and *label_matrix*, set `--resume --load_path@path to your checkpoint`. If you want to resume training with saved data of *centroids* and *label_matrix*, set `--resume --load_path@path to your checkpoint@ --load_path_soc @path to your soc.pkl@`. If you want to use the expert model or MoCo model, set `--resume --load_path @path to expert model/MoCo model@ --pretrained`.
+- `--num_tracked_batch`: $N_{B}$ for class transition tracking (CTT).
+- `--resume`, `--load_path`, `--load_path_soc` and `--pretrained`: If you want to resume training without saved data of *centroids* and *label_matrix*, set `--resume --load_path@path to your checkpoint`. If you want to resume training with saved data of *"centroids" (for CTT-based $k$-means clustering)* and *"label_matrix" (for CTT)*, set `--resume --load_path@path to your checkpoint@ --load_path_soc @path to your soc.pkl@`. If you want to use the expert model or MoCo model, set `--resume --load_path @path to expert model/MoCo model@ --pretrained`.
 
 ### Training with Single GPU
 
@@ -45,19 +45,19 @@ To better reproduce our experimental results, it is recommended to use multi-GPU
 #### Training from scratch
 
 ```
-python train_soc.py --world-size 1 --rank 0 --seed 1 --num_eval_iter 2000 --overwrite --save_name aves --dataset semi_aves --num_classes 200 --unlabel in 
+python train_soc.py --world-size 1 --rank 0 --seed 1 --num_eval_iter 2000 --overwrite --save_name aves_in_sc --dataset semi_aves --num_classes 200 --unlabel in 
 ```
 
 #### Training from scratch with MoCo
 
 ```
-python train_soc.py --world-size 1 --rank 0 --seed 1 --num_eval_iter 1000 --overwrite --save_name aves --dataset semi_aves --num_classes 200 --unlabel in --resume --load_path @path to MoCo model@ --pretrained --num_train_iter 200000
+python train_soc.py --world-size 1 --rank 0 --seed 1 --num_eval_iter 1000 --overwrite --save_name aves_in_sc_moco --dataset semi_aves --num_classes 200 --unlabel in --resume --load_path @path to MoCo pre-trained model@ --pretrained --num_train_iter 200000
 ```
 
-#### Training from expert 
+#### Training from expert or expert with MoCo
 
 ```
-python train_soc.py --world-size 1 --rank 0 --seed 1 --num_eval_iter 500 --overwrite --save_name aves --dataset semi_aves --num_classes 200 --unlabel in --resume --load_path @path to pre-trained model@ --pretrained --lr 0.001 --num_train_iter 50000
+python train_soc.py --world-size 1 --rank 0 --seed 1 --num_eval_iter 500 --overwrite --save_name aves_in_pre --dataset semi_aves --num_classes 200 --unlabel in --resume --load_path @path to pre-trained model@ --pretrained --lr 0.001 --num_train_iter 50000
 ```
 
 
@@ -68,7 +68,7 @@ The expert models and MoCo models can be obtained [here][ck] (provided by https:
 #### Training from scratch
 
 ```
-python train_soc.py --world-size 1 --rank 0 --seed 1 --num_eval_iter 2000 --overwrite --save_name aves --dataset semi_aves --num_classes 200 --unlabel inout 
+python train_soc.py --world-size 1 --rank 0 --seed 1 --num_eval_iter 2000 --overwrite --save_name aves_inout_sc --dataset semi_aves --num_classes 200 --unlabel inout 
 ```
 
 ***

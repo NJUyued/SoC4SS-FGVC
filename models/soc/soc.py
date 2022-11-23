@@ -225,8 +225,7 @@ class SoC:
             del tb_dict
             start_batch.record()
             if self.it > 0.5 * args.num_train_iter:
-                # self.num_eval_iter = round(self.num_eval_iter / 2)
-                self.num_eval_iter = 1000
+                self.num_eval_iter = round(self.num_eval_iter / 2)
         eval_dict = self.evaluate(args=args,lb_loader=self.loader_dict['train_lb'],ulb_loader=self.loader_dict['eval_ulb'],label_dic=label_dics,cluster=clusters)
         eval_dict.update({'eval/top-1-acc': best_eval_acc, 'eval/best_top1_it': best_it, 'eval/top-5-acc': best_eval_top5_acc, 'eval/best_top5_it': best_top5_it,})
         return eval_dict
