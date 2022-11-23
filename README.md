@@ -18,7 +18,10 @@ Code for CVPR 2023 Submission (ID: 8985) "*Roll With the Punches: Expansion and 
 - `--unlabel [in/inout]`: The unlabeled data used for training. The unlabeled data of Semi-Fungi and Semi-Aves contains two subsets. One has in-distribution data only, the other one has both in-distribution and out-of-distribution data.
 - `--alpha`: $\alpha$ for confidence-aware k selection.
 - `--num_tracked_batch`: $N_{B}$ for class transition tracking (CTT).
-- `--resume`, `--load_path`, `--load_path_soc` and `--pretrained`: If you want to resume training without saved data of *centroids* and *label_matrix*, set `--resume --load_path@path to your checkpoint`. If you want to resume training with saved data of `centroids` (for CTT-based k-means clustering)" and `label_matrix` (for CTT), set `--resume --load_path@path to your checkpoint@ --load_path_soc @path to your soc.pkl@`. If you want to use the expert model or MoCo model, set `--resume --load_path @path to expert model/MoCo model@ --pretrained`.
+- `--resume`, `--load_path`, `--load_path_soc` and `--pretrained`: 
+    - If you want to resume training without `soc.pkl`, i.e., saved data of `centroids` (for CTT-based k-means clustering) and `label_matrix` (for CTT), please set `--resume --load_path@path to your checkpoint`. 
+    - If you want to resume training with `soc.pkl`, please set `--resume --load_path@path to your checkpoint@ --load_path_soc @path to your soc.pkl@`. 
+    - If you want to use the expert model or MoCo model, please set `--resume --load_path @path to expert model/MoCo model@ --pretrained`.
 
 ### Training with Single GPU
 
