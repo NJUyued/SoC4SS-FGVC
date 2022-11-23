@@ -14,11 +14,11 @@ Code for CVPR 2023 Submission: *Roll With the Punches: Expansion and Shrinkage o
 ## How to Train
 ### Important Args
 - `--net [resnet18/resnet50/resnet101/wrn/wrnvar/preresnet/cnn13]`: By default, ResNet-50 is used for experiments.  We provide alternatives as follows: ResNet-18/101, Wide ResNet, Wide ResNet-Var (WRN-37-2), PreAct ResNet and CNN-13.
-- `--dataset [semi-fungi/semi-aves]` and `--data_dir`: Your dataset name and path. We support two datasets: Semi-Fungi and Semi-Aves (See *"A Realistic Evaluation of Semi-Supervised Learning for Fine-Grained Classification"* for details).
+- `--dataset [semi-fungi/semi-aves]` and `--data_dir`: Your dataset name and path. We support two datasets: Semi-Fungi and Semi-Aves (See "*A Realistic Evaluation of Semi-Supervised Learning for Fine-Grained Classification*" for details).
 - `--unlabel [in/inout]`: The unlabeled data used for training. The unlabeled data of Semi-Fungi and Semi-Aves contains two subsets. One has in-distribution data only, the other one has both in-distribution and out-of-distribution data.
-- `--alpha`: $\alpha$ for confidence-aware $k$ selection.
+- `--alpha`: $\alpha$ for confidence-aware k selection.
 - `--num_tracked_batch`: $N_{B}$ for class transition tracking (CTT).
-- `--resume`, `--load_path`, `--load_path_soc` and `--pretrained`: If you want to resume training without saved data of *centroids* and *label_matrix*, set `--resume --load_path@path to your checkpoint`. If you want to resume training with saved data of *"centroids (for CTT-based k-means clustering)"* and *"label_matrix (for CTT)"*, set `--resume --load_path@path to your checkpoint@ --load_path_soc @path to your soc.pkl@`. If you want to use the expert model or MoCo model, set `--resume --load_path @path to expert model/MoCo model@ --pretrained`.
+- `--resume`, `--load_path`, `--load_path_soc` and `--pretrained`: If you want to resume training without saved data of *centroids* and *label_matrix*, set `--resume --load_path@path to your checkpoint`. If you want to resume training with saved data of `centroids` (for CTT-based k-means clustering)" and `label_matrix` (for CTT), set `--resume --load_path@path to your checkpoint@ --load_path_soc @path to your soc.pkl@`. If you want to use the expert model or MoCo model, set `--resume --load_path @path to expert model/MoCo model@ --pretrained`.
 
 ### Training with Single GPU
 
