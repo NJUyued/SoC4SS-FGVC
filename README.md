@@ -1,6 +1,6 @@
 # SoC4SS-FGVC
 
-Code for CVPR 2023 Submission (ID: 8985) "*Roll With the Punches: Expansion and Shrinkage of Soft Label Selection for Semi-Supervised Fine-Grained Learning*".
+Code for CVPR 2023 Submission: **Roll With the Punches: Expansion and Shrinkage of Soft Label Selection for Semi-Supervised Fine-Grained Learning (ID: 8985)**.
 
 ## Requirements
 
@@ -19,8 +19,8 @@ Code for CVPR 2023 Submission (ID: 8985) "*Roll With the Punches: Expansion and 
 - `--alpha`: $\alpha$ for confidence-aware k selection.
 - `--num_tracked_batch`: $N_{B}$ for class transition tracking (CTT).
 - `--resume`, `--load_path`, `--load_path_soc` and `--pretrained`: 
-    - If you want to resume training without `soc.pkl`, i.e., saved data of `centroids` (for CTT-based k-means clustering) and `label_matrix` (for CTT), please set `--resume --load_path@path to your checkpoint`. 
-    - If you want to resume training with `soc.pkl`, please set `--resume --load_path@path to your checkpoint@ --load_path_soc @path to your soc.pkl@`. 
+    - If you want to resume training without `soc.pkl`, i.e., saved data of `centroids` (for CTT-based k-means clustering) and `label_matrix` (for CTT), please set `--resume --load_path @path to your checkpoint`. 
+    - If you want to resume training with `soc.pkl`, please set `--resume --load_path @path to your checkpoint@ --load_path_soc @path to your soc.pkl@`. 
     - If you want to use the expert model or MoCo model, please set `--resume --load_path @path to expert model/MoCo model@ --pretrained`.
 
 ### Training with Single GPU
@@ -78,7 +78,7 @@ python train_soc.py --world-size 1 --rank 0 --seed 1 --num_eval_iter 2000 --over
 
 ***
 ## Evaluation
-Each time you start training, the evaluation results of the current model will be displayed. If you want to evaluate a model, use its checkpoints to resume training, i.e., use `--resume --load_path load_path@path to your checkpoint@`.
+Each time you start training, the evaluation results of the current model will be displayed. If you want to evaluate a model, use its checkpoints to resume training, i.e., use `--resume --load_path load_path @path to your checkpoint@`.
 
 ## Results (e.g. seed=1)
 
