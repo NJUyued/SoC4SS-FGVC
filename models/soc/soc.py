@@ -98,8 +98,8 @@ class SoC:
         end_run = torch.cuda.Event(enable_timing=True)
         
         start_batch.record()
-        best_eval_acc, best_it = 0.0, 0
-        best_eval_top5_acc, best_top5_it = 0.0, 0
+        best_eval_acc, best_eval_acc_, best_it = 0.0, 0.0, 0
+        best_eval_top5_acc, best_eval_top5_acc_, best_top5_it = 0.0, 0.0, 0
         
         N = args.num_tracked_batch
         C = round(args.num_classes / args.alpha) + 1
@@ -203,13 +203,15 @@ class SoC:
                 
                 if tb_dict['eval/top-1-acc'] > best_eval_acc:
                     best_eval_acc = tb_dict['eval/top-1-acc']
+                    best_eval_acc_ = tb_dict['eval/top-5-acc']
                     best_it = self.it
 
                 if tb_dict['eval/top-5-acc'] > best_eval_top5_acc:
                     best_eval_top5_acc = tb_dict['eval/top-5-acc']
+                    best_eval_top5_acc_ = tb_dict['eval/top-1-acc']
                     best_top5_it = self.it
                 
-                self.print_fn(f"{self.it} iteration, USE_EMA: {hasattr(self, 'eval_model')}, {tb_dict}, BEST_TOP5_ACC: {best_eval_top5_acc} (with TOP1_ACC: {tb_dict['eval/top-1-acc']}) at {best_top5_it} iters, BEST_TOP1_ACC: {best_eval_acc} (with TOP5_ACC: {tb_dict['eval/top-5-acc']}) at {best_it} iters")
+                self.print_fn(f"{self.it} iteration, USE_EMA: {hasattr(self, 'eval_model')}, {tb_dict}, BEST_TOP5_ACC: {best_eval_top5_acc} (with TOP1_ACC: {best_eval_top5_acc_}) at {best_top5_it} iters, BEST_TOP1_ACC: {best_eval_acc} (with TOP5_ACC: {best_eval_acc_}) at {best_it} iters")
             
             if not args.multiprocessing_distributed or \
                     (args.multiprocessing_distributed and args.rank % ngpus_per_node == 0):
@@ -225,7 +227,7 @@ class SoC:
             del tb_dict
             start_batch.record()
             if self.it == 0.5 * args.num_train_iter:
-                self.num_eval_iter = round(self.num_eval_iter / 2)
+                self.num_eval_iter = int(self.num_eval_iter / 2)
         eval_dict = self.evaluate(args=args,lb_loader=self.loader_dict['train_lb'],ulb_loader=self.loader_dict['eval_ulb'],label_dic=label_dics,cluster=clusters)
         eval_dict.update({'eval/top-1-acc': best_eval_acc, 'eval/best_top1_it': best_it, 'eval/top-5-acc': best_eval_top5_acc, 'eval/best_top5_it': best_top5_it,})
         return eval_dict
