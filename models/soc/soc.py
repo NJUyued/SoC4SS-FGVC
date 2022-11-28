@@ -331,7 +331,7 @@ class SoC:
                         del checkpoint[key][k]
                 train_model_feature_extractor.load_state_dict(checkpoint[key], strict=True)
                 eval_model_feature_extractor.load_state_dict(checkpoint[key], strict=True)
-                self.print_fn(f"Check Point Loading: {key} is LOADED")
+                self.print_fn(f"Check Point Loading: pre_trained_model is LOADED")
             elif hasattr(self, key) and getattr(self, key) is not None:
                 if 'train_model' in key:
                     train_model.load_state_dict(checkpoint[key], strict=True)
