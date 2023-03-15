@@ -1,6 +1,6 @@
 # SoC4SS-FGVC
 
-Code for CVPR 2023 Submission: **Roll With the Punches: Expansion and Shrinkage of Soft Label Selection for Semi-Supervised Fine-Grained Learning (ID: 8985)**.
+Code for ICCV 2023 Submission: **Roll With the Punches: Expansion and Shrinkage of Soft Label Selection for Semi-Supervised Fine-Grained Learning (ID: 7493)**.
 
 ## Requirements
 
