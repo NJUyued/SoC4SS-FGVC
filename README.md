@@ -1,7 +1,17 @@
 # SoC4SS-FGVC
 
-Code for ICCV 2023 Submission: **Roll With the Punches: Expansion and Shrinkage of Soft Label Selection for Semi-Supervised Fine-Grained Learning (ID: 7493)**.
+This repo is the official Pytorch implementation of our paper:
 
+> **Roll with the Punches: Expansion and Shrinkage of Soft Label Selection for Semi-supervised Fine-Grained Learning**  
+> ***Authors**: Yue Duan, Zhen Zhao, Lei Qi, Luping Zhou, Lei Wang and Yinghuan Shi* 
+ 
+- Quick links: [[arXiv]([https://arxiv.org/abs/2308.08872](https://arxiv.org/abs/2312.12237)) | [Published paper (coming soon)]() | [Poster (coming soon)]() | [Code download](https://github.com/NJUyued/SoC4SS-FGVC/archive/refs/heads/master.zip)]
+ 
+ - Latest news:
+     - Our paper is accepted by **AAAI Conference on Artificial Intelligence (AAAI) 2024** 🎉🎉. Thanks to users.
+ - Related works:
+     - Interested in robust SSL in MNAR setting with mismatched distributions? 👉 Check out our ICCV'23 paper **PRG** [[arXiv](https://arxiv.org/abs/2308.08872) | [Repo](https://github.com/NJUyued/PRG4SSL-MNAR)] or our ECCV'22 paper **RDA** [[arXiv](https://arxiv.org/abs/2208.04619) | [Repo](https://github.com/NJUyued/RDA4RobustSSL)].
+     - Interested in the conventional SSL or application of complementary label in SSL? 👉 Check out our TNNLS paper **MutexMatch** [[arXiv](https://arxiv.org/abs/2203.14316) | [Repo](https://github.com/NJUyued/MutexMatch4SSL/)].
 ## Requirements
 
 - numpy==1.20.3
