@@ -5,7 +5,7 @@ This repo is the official Pytorch implementation of our paper:
 > **Roll with the Punches: Expansion and Shrinkage of Soft Label Selection for Semi-supervised Fine-Grained Learning**  
 > ***Authors**: Yue Duan, Zhen Zhao, Lei Qi, Luping Zhou, Lei Wang and Yinghuan Shi* 
  
-- Quick links: [[arXiv](https://arxiv.org/abs/2312.12237) | [Published paper](https://ojs.aaai.org/index.php/AAAI/article/view/29068) | [Poster/Slides]([https://ojs.aaai.org/index.php/AAAI/article/view/29068/30024](https://github.com/NJUyued/Posters-Slides-Videos/tree/master/SoC-AAAI'24)) | [Video/Poster](https://ojs.aaai.org/index.php/AAAI/article/view/29068/30024) | [Code download](https://github.com/NJUyued/SoC4SS-FGVC/archive/refs/heads/master.zip)]
+- Quick links: [[arXiv](https://arxiv.org/abs/2312.12237) | [Published paper](https://ojs.aaai.org/index.php/AAAI/article/view/29068) | [Poster/Slides](https://github.com/NJUyued/Posters-Slides-Videos/tree/master/SoC-AAAI'24)) | [Video](https://ojs.aaai.org/index.php/AAAI/article/view/29068/30024) | [Code download](https://github.com/NJUyued/SoC4SS-FGVC/archive/refs/heads/master.zip)]
  
  - Latest news:
      - Our paper is accepted by **AAAI Conference on Artificial Intelligence (AAAI) 2024** 🎉🎉. Thanks to users.
