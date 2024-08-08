@@ -3,11 +3,12 @@
 This repo is the official Pytorch implementation of our paper:
 
 > **Roll with the Punches: Expansion and Shrinkage of Soft Label Selection for Semi-supervised Fine-Grained Learning**  
-> ***Authors**: **Yue Duan**, Zhen Zhao, Lei Qi, Luping Zhou, Lei Wang and Yinghuan Shi* 
+> **Authors**: ***[Yue Duan](https://njuyued.github.io/)**, Zhen Zhao, Lei Qi, Luping Zhou, Lei Wang and Yinghuan Shi* 
  
 - 🔗 Quick links: [[PDF](https://arxiv.org/pdf/2312.12237)/[Abs](https://arxiv.org/abs/2312.12237)-arXiv | [PDF](https://ojs.aaai.org/index.php/AAAI/article/view/29068/30023)/[Abs](https://ojs.aaai.org/index.php/AAAI/article/view/29068)-Published | [Poster/Slides](https://github.com/NJUyued/Posters-Slides-Videos/tree/master/SoC-AAAI'24) | [Video](https://ojs.aaai.org/index.php/AAAI/article/view/29068/30024) | [Code Download](https://github.com/NJUyued/SoC4SS-FGVC/archive/refs/heads/master.zip)]
  
  - 📰 Latest news:
+     - **Watch the explanation of our paper by [slides](https://github.com/NJUyued/Posters-Slides-Videos/tree/master/SoC-AAAI'24) or [video](https://ojs.aaai.org/index.php/AAAI/article/view/29068/30024)**.
      - Our paper is accepted by **AAAI Conference on Artificial Intelligence (AAAI) 2024** 🎉🎉. Thanks to users.
  - 📑 Related works:
      - Interested in robust SSL in MNAR setting with mismatched distributions? 👉 Check out our ICCV'23 paper **PRG** [[PDF-arXiv](https://arxiv.org/abs/2308.08872) | [Code](https://github.com/NJUyued/PRG4SSL-MNAR)] or our ECCV'22 paper **RDA** [[PDF-arXiv](https://arxiv.org/pdf/2208.04619) | [Code](https://github.com/NJUyued/RDA4RobustSSL)].
@@ -110,6 +111,30 @@ Each time you start training, the evaluation results of the current model will b
 | | | iNat + MoCo | 62.2 | 84.4 | [here][fg-in-in-mc] |
 | | out-of-distribution | - | 35.6 | 60.6 | [here][fg-inout-sc] | 
 | |  | MoCo | 50.0 | 74.8 | [here][fg-inout-sc-mc] |
+
+## Citaion
+Please cite our paper if you find SoC useful:
+```
+@inproceedings{duan2024roll,
+  title={Roll with the Punches: Expansion and Shrinkage of Soft Label Selection for Semi-supervised Fine-Grained Learning},
+  author={Duan, Yue and Zhao, Zhen and Qi, Lei and Zhou, Luping and Wang, Lei and Shi, Yinghuan},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={10},
+  pages={11829--11837},
+  year={2024}
+}
+```
+or
+```
+@article{duan2023roll,
+  title={Roll With the Punches: Expansion and Shrinkage of Soft Label Selection for Semi-supervised Fine-Grained Learning},
+  author={Duan, Yue and Zhao, Zhen and Qi, Lei and Zhou, Luping and Wang, Lei and Shi, Yinghuan},
+  journal={arXiv preprint arXiv:2312.12237},
+  year={2023}
+}
+```
+
 
 [av-in-im]: https://drive.google.com/drive/folders/1apctbIN_O9EuD8ZXrr7Diwq-1z0qADBu?usp=share_link
 [av-in-im-mc]: https://drive.google.com/drive/folders/1lx-DYwCF1bDdGoy5nUQ_0Kdp6jhwQ_qi?usp=share_link
