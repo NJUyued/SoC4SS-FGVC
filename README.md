@@ -5,7 +5,9 @@ This repo is the official Pytorch implementation of our paper:
 > **Roll with the Punches: Expansion and Shrinkage of Soft Label Selection for Semi-supervised Fine-Grained Learning**  
 > **Authors**: ***[Yue Duan](https://njuyued.github.io/)**, Zhen Zhao, Lei Qi, Luping Zhou, Lei Wang and Yinghuan Shi* 
  
-- 🔗 **Quick links:** [[PDF](https://arxiv.org/pdf/2312.12237)/[Abs](https://arxiv.org/abs/2312.12237)-arXiv | [PDF](https://ojs.aaai.org/index.php/AAAI/article/view/29068/30023)/[Abs](https://ojs.aaai.org/index.php/AAAI/article/view/29068)-Published | [Video](https://ojs.aaai.org/index.php/AAAI/article/view/29068/30024) | [Poster/Slides](https://github.com/NJUyued/Posters-Slides-Videos/tree/master/SoC-AAAI'24) | [Code Download](https://github.com/NJUyued/SoC4SS-FGVC/archive/refs/heads/master.zip)]
+- 🔗 **Quick links:**
+    - [Code Download](https://github.com/NJUyued/SoC4SS-FGVC/archive/refs/heads/master.zip)
+    - [[PDF](https://arxiv.org/pdf/2312.12237)/[Abs](https://arxiv.org/abs/2312.12237)-arXiv | [PDF](https://ojs.aaai.org/index.php/AAAI/article/view/29068/30023)/[Abs](https://ojs.aaai.org/index.php/AAAI/article/view/29068)-Published | [Video](https://ojs.aaai.org/index.php/AAAI/article/view/29068/30024) | [Poster/Slides](https://github.com/NJUyued/Posters-Slides-Videos/tree/master/SoC-AAAI'24)]
  
  - 📰 **Latest news:**
      - **[Slides](https://github.com/NJUyued/Posters-Slides-Videos/tree/master/SoC-AAAI'24) and [video](https://ojs.aaai.org/index.php/AAAI/article/view/29068/30024) explaining our paper are now online!**
