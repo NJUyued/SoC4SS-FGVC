@@ -116,7 +116,7 @@ Each time you start training, the evaluation results of the current model will b
 | | out-of-distribution | - | 35.6 | 60.6 | [here][fg-inout-sc] | 
 | |  | MoCo | 50.0 | 74.8 | [here][fg-inout-sc-mc] |
 
-## Citaion
+## Citation
 Please cite our paper if you find SoC useful:
 ```
 @inproceedings{duan2024roll,
