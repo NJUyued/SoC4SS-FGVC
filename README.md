@@ -13,7 +13,9 @@ This repo is the official Pytorch implementation of our paper:
      - **[Slides](https://github.com/NJUyued/Posters-Slides-Videos/tree/master/SoC-AAAI'24) and [video](https://ojs.aaai.org/index.php/AAAI/article/view/29068/30024) explaining our paper are now online!**
      - Our paper is accepted by **AAAI Conference on Artificial Intelligence (AAAI) 2024** 🎉🎉. Thanks to users.
  - 📑 **Related works:**
-     - 🆕 **[LATEST]** Interested in the **cross-modal retrieval with noisy correspondence**? 👉 Check out our ACMMM'24 paper **PC2** [[PDF-arXiv](https://arxiv.org/pdf/2408.01349) | [Code](https://github.com/alipay/PC2-NoiseofWeb)].
+     - 🆕 **[LATEST]** Interested in **Semi-supervised Learning used for Deep Clustering**? 👉 Check out our TIP paper **ASD** [[PDF-arXiv](https://arxiv.org/pdf/2509.20976)].
+     - 🆕 **[LATEST]** Interested in **Semi-supervised Continual Learning**? 👉 Check out our ICCV'25 paper **USP** [[PDF-arXiv](https://arxiv.org/pdf/2508.05316) | [Code](https://github.com/NJUyued/USP4SSCL)].
+     - Interested in the **cross-modal retrieval with noisy correspondence**? 👉 Check out our ACMMM'24 paper **PC2** [[PDF-arXiv](https://arxiv.org/pdf/2408.01349) | [Code](https://github.com/alipay/PC2-NoiseofWeb)].
      - **[SSL]** Interested in **robust SSL in MNAR setting** with mismatched distributions? 👉 Check out our ICCV'23 paper **PRG** [[PDF-arXiv](https://arxiv.org/abs/2308.08872) | [Code](https://github.com/NJUyued/PRG4SSL-MNAR)] or our ECCV'22 paper **RDA** [[PDF-arXiv](https://arxiv.org/pdf/2208.04619) | [Code](https://github.com/NJUyued/RDA4RobustSSL)].
      - **[SSL]** Interested in the conventional SSL or application of **complementary label in SSL**? 👉 Check out our TNNLS paper **MutexMatch** [[PDF-arXiv](https://arxiv.org/pdf/2203.14316) | [Code](https://github.com/NJUyued/MutexMatch4SSL/)].
 
